@@ -1,0 +1,10 @@
+#grid{
+    height: 80vh;
+    width: 90vw;
+}
+div{
+    min-height: 15px;
+}
+p{
+    text-align: right;
+}

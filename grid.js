@@ -1,5 +1,5 @@
 let rowTotal = 16;
-let gridContainer = document.getElementById('container');
+const gridContainer = document.getElementById('container');
 let gridTotal = rowTotal * rowTotal;
 let span = document.getElementsByClassName("gridSize");
 let resetBtn = document.querySelector('#resetBtn');
@@ -9,19 +9,11 @@ function writeGridSize(){
         span[i].textContent=rowTotal;
     }
 }
-//not working yet
-/* function deleteCells(){
-    for(i=cell;i>0;i--){
-        document.gridContainer.removeChild.cell[i];
-        console.log(i);
+function deleteCells(){
+    while(gridContainer.firstChild){
+        gridContainer.removeChild(gridContainer.firstChild);
+        console.log("removed cell");
     }
-} */
-
-function resetGrid(){
-    rowTotal = prompt("New grid size?");
-    deleteCells();
-    drawGrid();
-    writeGridSize();
 }
 
 function drawGrid(){
@@ -46,5 +38,12 @@ function drawGrid(){
         }
     writeGridSize();
 }
+function resetGrid(){
+    rowTotal = prompt("New grid size?");
+    deleteCells();
+    drawGrid();
+    writeGridSize();
+}
 drawGrid();
-//resetBtn.addEventListener("click", resetGrid);
+cell.addEventListener("click", console.log("Mouse Entered cell"));
+resetBtn.addEventListener("click", resetGrid);

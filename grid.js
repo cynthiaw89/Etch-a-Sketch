@@ -4,18 +4,20 @@ let gridTotal = rowTotal * rowTotal;
 let span = document.getElementsByClassName("gridSize");
 let resetBtn = document.querySelector('#resetBtn');
 let cell = document.getElementsByClassName("cell");
+//sets display for size of grid to row total
 function writeGridSize(){
     for (i=0; i<span.length; i++){
         span[i].textContent=rowTotal;
     }
 }
+//deletes cells withi grid container
 function deleteCells(){
     while(gridContainer.firstChild){
         gridContainer.removeChild(gridContainer.firstChild);
         console.log("removed cell");
     }
 }
-
+//draws new grid
 function drawGrid(){
     gridContainer.style.display = 'grid';
     gridContainer.style.gridTemplateRows = `repeat(rowTotal, 10px)`;
@@ -45,5 +47,7 @@ function resetGrid(){
     writeGridSize();
 }
 drawGrid();
+//gives me console.log for mouseover
 cell.addEventListener("click", console.log("Mouse Entered cell"));
+//resets grid on btn click
 resetBtn.addEventListener("click", resetGrid);

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" content="width=device-width" name="viewport"/>
     <link rel ="stylesheet" type ="text/css" href="style.css" />
   <title>Etch-a-Sketch</title>
 </head>
@@ -9,16 +9,33 @@
     <h1>
         Etch-a-Sketch
     </h1>
-    <p>
-      Grid size: <span class="gridSize"> </span> x <span class="gridSize"> </span>
-    </p>
+    <p>Buttons with "X"s are not yet functioning.  Clicking on a marked cell will clear it.</p>
+    <div id="buttons">
+      <button id="clearBtn">Clear Grid</button>
+      <button id="colorizeButton"><!--Not working yet-->XColorize</button>
+      <button id="brightness"><!--Not working yet-->XBrightness</button>
+      <button id="colorButton"><!--Not working yet-->XPick Color</button>
+      <button id="opacityButton"><!--Not working yet-->XOpacity</button>
+      <button id="resetBtn">Reset Grid</button>
+    </div>
+    <div id="displayInfo"></div>
+      <p>
+        Grid size: <span class="displaySize"> </span> x <span class="displaySize"> </span>
+      </p>
+      <p>
+        Color: <span id="displayColor"> </span>
+      </p>
+      <p>
+        Brightness: <span id="displayBrightness"> </span>
+      </p>
+      <p>
+        Opacity: <span id="displayOpacity"> </span>
+      </p>
+  </div>
     <div id="container">
       <!--Contains gridContainer in javascript-->
     </div>
     <br>
-    <div id="reset">
-      <button id="resetBtn">Reset</button>
-    </div>
   <script type="text/javascript" src="grid.js">
   </script>
 </body>

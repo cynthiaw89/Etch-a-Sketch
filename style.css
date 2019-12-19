@@ -1,10 +1,28 @@
-#grid{
-    height: 960px;
-    width: 960px;
+html{
+    text-align: center;
 }
-div{
-    min-height: 15px;
+#container{
+    display: grid;
+    height: 600px;
+    width: 600px;
+    border: 1px solid black;
+    margin-right: auto;
+    margin-left: auto;
 }
-p{
-    text-align: right;
+
+#buttons{
+    display: flex;
+    justify-content: space-between;
+    margin: auto auto;
+    padding: 20px;
+    max-width: 600px;
+}
+.cell{
+    transition: .3s;
+}
+.marked{
+    background-color: black;
+}
+.clear{
+    opacity: 0;
 }

@@ -44,9 +44,11 @@ function createListeners(){
         })
     })
 }
+//function runs when colorize button is pressed
 function colorize(brightness){
     cells = getCells();
     cells.forEach((cell) => {
+        //TODO: Create variable to hold random color and set to new class
         marked.style.backgroundColor = `${randomColor(brightness)}`;
     });
 }

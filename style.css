@@ -18,7 +18,7 @@ html{
     max-width: 600px;
 }
 .cell{
-    transition: .3s;
+    transition: .2s;
 }
 .marked{
     background-color: black;
